@@ -1,0 +1,63 @@
+//C语言字符数组中输入空格或回车也会存入数组中
+//因为将它的上下左右扩展种草，所以这个数组必须都要向外扩展一个，打印的时候只打印里面的
+int main()
+{
+	char arr[20][20];
+	int m, n = 0;
+	scanf("%d%d", &m,&n);
+	int i, j = 0;
+	char ch =getchar();//将输入mn后的换行存入到键盘缓存区
+	for (i = 1; i < m+1; i++)
+	{
+		for (j = 1; j < n+1; j++)
+		{
+			scanf("%c",&arr[i][j]);
+		}
+		ch = getchar();//将换行存入getchar()中
+	}
+	
+	int k = 0;
+	scanf("%d",&k);
+	while (k--)
+	{
+		for (i = 1; i < m + 1; i++)
+		{
+			for (j = 1; j < n + 1; j++)
+			{
+				if (arr[i][j] == 'g')//先将有字符g的上下左右（不是g的地方）换成h，最后将h的地方换成g，不然会混淆
+				{
+					if (arr[i][j - 1]!= 'g')
+						arr[i][j - 1] = 'h';
+					if (arr[i][j + 1] != 'g')
+						arr[i][j + 1] = 'h';
+					if (arr[i - 1][j] != 'g')
+						arr[i - 1][j] = 'h';
+					if (arr[i + 1][j] != 'g')
+						 arr[i+1][j] = 'h';
+				}
+			}
+		}
+		
+		//将有h的地方换成g
+		for (i = 1; i < m + 1; i++)
+		{
+			for (j = 1; j < n + 1; j++)
+			{
+				if (arr[i][j] == 'h')
+				{
+					arr[i][j]='g';
+
+				}
+			}
+		}
+	}
+	
+	for (i = 1; i < m+1; i++)
+	{
+		for (j = 1; j < n+1; j++)
+		{
+			printf("%c",arr[i][j]);
+		}printf("\n");
+
+	}
+}
