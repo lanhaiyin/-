@@ -1,0 +1,210 @@
+typedef char STDataType;
+
+// 支持动态增长的栈
+
+typedef struct Stack
+{
+	STDataType* myarr;
+	int _top;       // 栈顶  
+	int _capacity;  // 容量 
+}Stack;
+
+void StackInit(Stack* ps);
+void StackCapacity(Stack* ps);
+void StackPush(Stack* ps, STDataType x);
+void StackPop(Stack* ps);
+STDataType StackTop(Stack* ps);
+int StackEmpty(Stack* ps);
+int StackSize(Stack* ps);//输出栈的大小
+
+void StackInit(Stack* ps)//创建空数组
+{
+	assert(ps);
+	ps->_capacity = maxsize;
+	ps->_top = 0;
+	ps->myarr = (STDataType*)malloc(sizeof(STDataType)*ps->_capacity);
+	//if (ps->myarr == NULL)
+	//	return 0;
+}
+void StackCapacity(Stack* ps)//扩容
+{
+	assert(ps);
+	if (ps->_top == ps->_capacity)
+	{
+		if (ps->myarr == 0)
+			ps->_capacity = 2;
+		ps->myarr= (STDataType *)realloc(ps->myarr, ps->_capacity*sizeof(STDataType)* 2);
+		ps->_capacity = ps->_capacity * 2;
+
+	}
+}
+
+void StackPush(Stack* ps, STDataType x)//入栈
+{
+	assert(ps);
+	StackCapacity(ps);
+	ps->myarr[ps->_top] = x;
+	ps->_top++;
+}
+
+void StackPop(Stack* ps)//出栈
+{
+	assert(ps);
+	if (ps->_top > 0)
+	{
+		ps->_top--;
+	}
+	
+
+}
+int StackEmpty(Stack* ps)//清空栈
+{
+	assert(ps);
+	ps->_capacity = 0;
+	ps->_top = 0;
+	free(ps->myarr);
+	if (ps->_top == 0)
+	printf("栈为空");
+    return ps->_top;
+}
+int StackSize(Stack* ps)//输出栈的大小
+{
+	assert(ps); 
+	//  printf("栈的长度为%d\n",ps->_top);
+    return ps->_top;
+}
+STDataType StackTop(Stack* ps)
+{
+	assert(ps);
+	if (ps->_top == 0)
+	{
+		printf("栈为空\n");
+		return 1;
+	}
+	printf("栈顶的内容%d\n", ps->myarr[ps->_top-1]);
+	return  ps->myarr[ps->_top-1];
+}
+//通过if来一个一个判断右边的括号是否与当前的*s匹配，匹配则出栈并++s;
+
+bool isValid(char * s){
+    Stack ps;
+    StackInit(&ps);
+   while(*s)
+   {
+         if(*s=='('||*s=='{'||*s=='[')
+        {
+          StackPush(&ps,*s);//入栈
+             s++;
+        }
+     if(*s==']'||*s==')'||*s=='}')
+     {
+        if(*s==']'&&StackTop(&ps)=='[')
+        {
+             StackPop(&ps);//出栈
+             ++s;
+             continue;
+        }
+        else if(*s=='}'&&StackTop(&ps)=='{')
+        {
+             StackPop(&ps);//出栈
+             ++s;
+             continue;
+        }
+        else if(*s==')'&&StackTop(&ps)=='(')
+        {
+              StackPop(&ps);//出栈
+              ++s;
+              continue;
+        }
+        else return false;
+     }
+   }
+   if(*s=='\0'&&StackSize(&ps)==0)
+   {
+       return true;
+   }
+   return false;
+    StackEmpty(&ps);//清空栈
+}
+
+//使用上面的方法代码太过繁琐，使用指针数组来存放对应类型的指针来指向对应的地址。
+
+
+
+bool isValid(char * s){
+    Stack ps;
+    StackInit(&ps);
+    while(*s)
+    {
+        if(*s == '[' || *s == '(' || *s == '{')
+        {
+            StackPush(&ps, *s);
+            ++s;
+        }
+        else
+        {
+            if(StackSize(&ps)==0)
+            return false;
+ 
+          static char *arr[]={"()","{}","[]"};
+         for(int i=0;i<sizeof(arr)/sizeof(char *);++i)
+         {
+              if(StackTop(&ps)==arr[i][0])
+            {
+            if(*s!=arr[i][1])
+            {
+                return false;
+            }
+        
+            else
+            {
+                 StackPop(&ps);
+                 break;
+            } 
+            }
+       
+       }
+ ++s;
+    }
+}
+if(StackSize(&ps)== 0&&*s =='\0')
+{
+ return true;
+}
+return false;
+}
+
+//使用数组来存放括号，当i%2=0时，说明是左括号，当是右括号时判断*s是否与arr[i-1]一致，否则不匹配
+
+bool isValid(char * s){
+    Stack ps;
+    StackInit(&ps);
+    char arr[]={'(',')','{','}','[',']'};
+   while(*s)
+   {
+       int i=0;
+       while(*s!=arr[i])i++;
+    if(i%2==0)
+    {
+    StackPush(&ps,*s);
+  
+    }
+    else
+    {
+       
+        if(StackTop(&ps)==arr[i-1])
+        {
+        StackPop(&ps);
+      
+        }
+        else return false;
+    }
+    s++;
+   }
+if(StackSize(&ps)==0&&*s=='\0')
+return true;
+else
+return false;
+
+StackEmpty(&ps);//清空栈
+}
