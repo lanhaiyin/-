@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	char arr[10];
+	int n=0;scanf("%d",&n);
+	int i=0;int x=0;
+	while(n>=16)
+	{
+		x=n/16;
+		if (9 < (n % 16)&&(n%16)<16)
+		{
+			arr[i] = 'A' + (n % 16 )- 10;
+		}
+		else
+			arr[i] = n % 16+'0';
+		i++;
+		n=x;
+
+	}       
+	if(n>9&&n<16)
+		arr[i]='A'+n-10;
+	else
+		arr[i]=n+'0';
+	int j=i;
+	
+	for(;j>=0;j--)
+	{
+
+		printf("%c",arr[j]);
+	}
+}
