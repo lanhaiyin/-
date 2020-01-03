@@ -1,0 +1,35 @@
+E:\Users\BIG YAO\Desktop\期末\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+E:\Users\BIG YAO\Desktop\期末\仓库管理\model\bin\Debug\model.dll
+E:\Users\BIG YAO\Desktop\期末\仓库管理\model\bin\Debug\model.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\model\obj\Debug\model.dll
+E:\Users\BIG YAO\Desktop\期末\仓库管理\model\obj\Debug\model.pdb
+H:\c#\期末\仓库管理\model\bin\Debug\model.dll
+H:\c#\期末\仓库管理\model\bin\Debug\model.pdb
+H:\c#\期末\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+H:\c#\期末\仓库管理\model\obj\Debug\model.dll
+H:\c#\期末\仓库管理\model\obj\Debug\model.pdb
+D:\期末\仓库管理\model\bin\Debug\model.dll
+D:\期末\仓库管理\model\bin\Debug\model.pdb
+D:\期末\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+D:\期末\仓库管理\model\obj\Debug\model.dll
+D:\期末\仓库管理\model\obj\Debug\model.pdb
+D:\Desktop\仓库管理\model\bin\Debug\model.dll
+D:\Desktop\仓库管理\model\bin\Debug\model.pdb
+D:\Desktop\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+D:\Desktop\仓库管理\model\obj\Debug\model.dll
+D:\Desktop\仓库管理\model\obj\Debug\model.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\model\bin\Debug\model.dll
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\model\bin\Debug\model.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\model\obj\Debug\model.dll
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\model\obj\Debug\model.pdb
+H:\c#\仓库管理\model\obj\Debug\ResolveAssemblyReference.cache
+H:\c#\仓库管理\model\bin\Debug\model.dll
+H:\c#\仓库管理\model\bin\Debug\model.pdb
+H:\c#\仓库管理\model\obj\Debug\model.dll
+H:\c#\仓库管理\model\obj\Debug\model.pdb
+D:\课设\仓库管理\model\bin\Debug\model.dll
+D:\课设\仓库管理\model\bin\Debug\model.pdb
+D:\课设\仓库管理\model\obj\Debug\model.csprojResolveAssemblyReference.cache
+D:\课设\仓库管理\model\obj\Debug\model.dll
+D:\课设\仓库管理\model\obj\Debug\model.pdb

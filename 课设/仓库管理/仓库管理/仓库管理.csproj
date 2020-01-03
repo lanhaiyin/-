@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C20AF195-48BD-4A70-9B71-FEFD864805EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>仓库管理</RootNamespace>
+    <AssemblyName>仓库管理</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ckdh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ckdh.Designer.cs">
+      <DependentUpon>ckdh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cktj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cktj.Designer.cs">
+      <DependentUpon>cktj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ckyz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ckyz.Designer.cs">
+      <DependentUpon>ckyz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hjqk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hjqk.Designer.cs">
+      <DependentUpon>hjqk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hjsr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hjsr.Designer.cs">
+      <DependentUpon>hjsr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hjxgsc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hjxgsc.Designer.cs">
+      <DependentUpon>hjxgsc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rkdh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rkdh.Designer.cs">
+      <DependentUpon>rkdh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rkyz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rkyz.Designer.cs">
+      <DependentUpon>rkyz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rktj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rktj.Designer.cs">
+      <DependentUpon>rktj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rqcx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rqcx.Designer.cs">
+      <DependentUpon>rqcx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scyh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scyh.Designer.cs">
+      <DependentUpon>scyh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spkc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spkc.Designer.cs">
+      <DependentUpon>spkc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splr.Designer.cs">
+      <DependentUpon>splr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spxgsc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spxgsc.Designer.cs">
+      <DependentUpon>spxgsc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tjyh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tjyh.Designer.cs">
+      <DependentUpon>tjyh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xgmm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xgmm.Designer.cs">
+      <DependentUpon>xgmm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xgyh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xgyh.Designer.cs">
+      <DependentUpon>xgyh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhuye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhuye.Designer.cs">
+      <DependentUpon>zhuye.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ckdh.resx">
+      <DependentUpon>ckdh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cktj.resx">
+      <DependentUpon>cktj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ckyz.resx">
+      <DependentUpon>ckyz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hjqk.resx">
+      <DependentUpon>hjqk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hjsr.resx">
+      <DependentUpon>hjsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hjxgsc.resx">
+      <DependentUpon>hjxgsc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rkdh.resx">
+      <DependentUpon>rkdh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rktj.resx">
+      <DependentUpon>rktj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rkyz.resx">
+      <DependentUpon>rkyz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rqcx.resx">
+      <DependentUpon>rqcx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scyh.resx">
+      <DependentUpon>scyh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spkc.resx">
+      <DependentUpon>spkc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splr.resx">
+      <DependentUpon>splr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spxgsc.resx">
+      <DependentUpon>spxgsc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tjyh.resx">
+      <DependentUpon>tjyh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xgmm.resx">
+      <DependentUpon>xgmm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xgyh.resx">
+      <DependentUpon>xgyh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhuye.resx">
+      <DependentUpon>zhuye.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bll\bll.csproj">
+      <Project>{2930566E-1094-4C6E-AC1F-F1732F4B9762}</Project>
+      <Name>bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\model\model.csproj">
+      <Project>{66F6A521-1359-431C-8F10-E9C25218AFDB}</Project>
+      <Name>model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,218 @@
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.csproj.GenerateResource.Cache
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\bll.dll
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\model.dll
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\dal.dll
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\model.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\bll.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\bin\Debug\dal.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+E:\Users\BIG YAO\Desktop\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\bll.dll
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\model.dll
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\dal.dll
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\bll.pdb
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\model.pdb
+H:\c#\期末\仓库管理\仓库管理\bin\Debug\dal.pdb
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsc.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxg.resources
+H:\c#\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+D:\期末\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+D:\期末\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+D:\期末\仓库管理\仓库管理\bin\Debug\bll.dll
+D:\期末\仓库管理\仓库管理\bin\Debug\model.dll
+D:\期末\仓库管理\仓库管理\bin\Debug\dal.dll
+D:\期末\仓库管理\仓库管理\bin\Debug\model.pdb
+D:\期末\仓库管理\仓库管理\bin\Debug\bll.pdb
+D:\期末\仓库管理\仓库管理\bin\Debug\dal.pdb
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsc.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxg.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+D:\期末\仓库管理\仓库管理\obj\x86\Debug\仓库管理.csproj.GenerateResource.Cache
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+D:\Desktop\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+D:\Desktop\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+D:\Desktop\仓库管理\仓库管理\bin\Debug\bll.dll
+D:\Desktop\仓库管理\仓库管理\bin\Debug\model.dll
+D:\Desktop\仓库管理\仓库管理\bin\Debug\dal.dll
+D:\Desktop\仓库管理\仓库管理\bin\Debug\bll.pdb
+D:\Desktop\仓库管理\仓库管理\bin\Debug\model.pdb
+D:\Desktop\仓库管理\仓库管理\bin\Debug\dal.pdb
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsc.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxg.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Desktop\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\bll.dll
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\model.dll
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\dal.dll
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\model.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\bll.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\bin\Debug\dal.pdb
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsc.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxg.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+C:\Documents and Settings\Administrator.LENOVO-34545488\桌面\仓库管理\仓库管理\obj\x86\Debug\仓库管理.csproj.GenerateResource.Cache
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+H:\c#\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+H:\c#\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+H:\c#\仓库管理\仓库管理\bin\Debug\bll.dll
+H:\c#\仓库管理\仓库管理\bin\Debug\model.dll
+H:\c#\仓库管理\仓库管理\bin\Debug\dal.dll
+H:\c#\仓库管理\仓库管理\bin\Debug\bll.pdb
+H:\c#\仓库管理\仓库管理\bin\Debug\model.pdb
+H:\c#\仓库管理\仓库管理\bin\Debug\dal.pdb
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+H:\c#\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxgsc.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.exe
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.pdb
+D:\课设\仓库管理\仓库管理\bin\Debug\仓库管理.exe
+D:\课设\仓库管理\仓库管理\bin\Debug\仓库管理.pdb
+D:\课设\仓库管理\仓库管理\bin\Debug\bll.dll
+D:\课设\仓库管理\仓库管理\bin\Debug\model.dll
+D:\课设\仓库管理\仓库管理\bin\Debug\dal.dll
+D:\课设\仓库管理\仓库管理\bin\Debug\bll.pdb
+D:\课设\仓库管理\仓库管理\bin\Debug\model.pdb
+D:\课设\仓库管理\仓库管理\bin\Debug\dal.pdb
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.csprojResolveAssemblyReference.cache
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckdh.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.cktj.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.ckyz.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjqk.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjsr.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.hjxgsc.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.login.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.Properties.Resources.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkdh.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rktj.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rkyz.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.rqcx.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.scyh.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spkc.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.splr.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.spxgsc.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.tjyh.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgmm.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.xgyh.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.zhuye.resources
+D:\课设\仓库管理\仓库管理\obj\x86\Debug\仓库管理.csproj.GenerateResource.Cache
