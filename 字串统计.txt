@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+void fun(int L,int len,char *s,char arr[1000][1000])
+{
+    //fenge是将长度不同的数组分割出来相当于界限
+    int fenge=0;int zi=0;//zi是真正数组的行号
+    while(L<=len-1)
+    {
+         char *cur=s;
+         char *next=s+1;
+         int i=0;
+            //将分割的字符串存进数组中，数组的第一个元素值是次数，最后是'\0'
+         for(;i<len-L+1;i++)
+     {
+
+        arr[zi][0]=1;
+        if(cur+L-1==0)break;
+        int j=0;
+       for(j=1;j<L+1;j++)
+       {
+
+           arr[zi][j]=*cur;
+           cur++;
+       }
+       arr[zi][j]=0;
+       int m=fenge;
+       //将分割的每一块与它长度相同的前面的数组值进行比较
+       for(;m<zi;m++)
+       {
+           int n=1;int flag=0;
+           for(;n<L+1;n++)
+           {
+              if(arr[zi][n]!=arr[m][n])
+              {
+                  flag=1;
+                  break;
+              }
+
+           }
+           //flag==0表示出现相同的，则给与之相同的前面的数组值加1，他自己成0
+           if(flag==0)
+           {
+                arr[zi][0]=0;
+                arr[m][0]++;
+                break;
+           }
+       }
+       cur=next;
+       next++;
+       zi++;
+   }
+L++;
+fenge=zi;
+    }
+
+}
+void print(char arr[1000][1000],int L,int len)
+{
+   int max=arr[0][0];int temp=L;
+   int k=0;int zi=0;
+    while(L<=len-1)
+    {
+         int i=0;
+         int flag=0;//遍历数组将最大的找出其对应的下表，分割出来的后面的如果和分割前的最大值一样，则输出分割后的
+         for(;i<len-L+1;i++)
+        {
+
+        if(max<arr[zi][0]||(max<=arr[zi][0]&&temp<L))
+            {
+                    if(flag!=0&&max==arr[zi][0])//防止出现同一个分割部分同样的次数，后面的将前面的覆盖
+                        ;
+                    else
+                    {
+                      max=arr[i][0];
+                      k=zi;
+                    }
+            }
+            zi++;
+           flag=1;
+        }
+      temp=L;
+        L++;
+    }
+
+    int j=1;
+
+   while(arr[k][j]!=0)
+    {
+        printf("%c",arr[k][j]);
+        j++;
+    }
+}
+
+int main()
+{
+    int L;
+    char s[60]={0};
+   scanf("%d",&L);
+   scanf("%s",s);
+    int len=strlen(s);
+    char arr[1000][1000];
+    fun(L,len,s,arr);
+    print(arr,L,len);
+    return 0;
+}
