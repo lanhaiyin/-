@@ -1,0 +1,61 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+int prime(int num)
+{
+	int i = 2;
+	for(;i<= num/2;i++)
+	{
+		if(num%i == 0)
+		{
+			return 1;//不是质数
+		}
+	}
+	return 0;
+}
+void resolve(int num)
+{
+	int x = num;
+	int a = 1;
+	int i = 2;int n = 0;
+	for(;i <=num;i++)
+	{
+		
+		if(num%i != 0)
+		{
+			continue;
+		}
+		else
+		{
+			printf("%d", i); a *= i;
+			if ((x - a) != 0)
+			{
+				printf("*");
+			}
+				num=num / i;
+				i = 1;
+		}
+		
+	}
+}
+
+int main()
+{
+	int a = 0,b = 0;
+	scanf("%d%d",&a,&b);
+
+	for(;a<=b;a++)
+	{
+		printf("%d=",a);
+		if(prime(a))
+		{
+			resolve(a);
+		}
+		else
+		{
+			printf("%d",a);
+		}
+		printf("\n");
+	}
+	return 0;
+}
