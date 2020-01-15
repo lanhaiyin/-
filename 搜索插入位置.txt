@@ -1,0 +1,52 @@
+解法1
+int searchInsert(int* nums, int numsSize, int target){
+    int i=1;
+ if(numsSize==1)
+ {
+     if(nums[0]<target)
+     return 1;
+     else return 0;
+ }
+    while(i<numsSize)
+    {
+      if(target<nums[0])return 0;
+       if(target>=nums[i-1]&&target<nums[i])
+        {
+            if(target==nums[i-1])
+            return --i;
+            else if(target==nums[i])
+            return i;
+            else
+            return i;
+            
+
+        }
+        else i++;
+    }
+    if(target==nums[i-1])
+    return i-1;
+    return i;
+}
+
+
+
+
+解法二
+2.
+int searchInsert(int* nums, int numsSize, int target)
+{
+    int i=0;
+   
+ while(i<numsSize)
+  
+  {
+        if(target<=nums[i])
+ return i;
+    
+    i++;
+  
+  }
+   
+ return numsSize;
+
+}
