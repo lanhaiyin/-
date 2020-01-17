@@ -1,0 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <cstdio>
+#include<algorithm>包含算法的头文件
+using namespace std;
+int main()
+{
+    vector<double> vecdouble={5.5,1.1,2.2,3.3,8.8};
+    //向数组中插入数字
+    vecdouble.push_back(4.4);//在数组的尾部插入一个数字
+    //vecdouble.push_front(9.8);//头插
+    for(int i=0;i<vecdouble.size();i++)
+    {
+        cout<<vecdouble[i];
+    }cout<<endl;
+    vector<double> ::iterator it;//得到迭代器的对象  实际上是一个指针对象
+    for(it=vecdouble.begin();it!=vecdouble.end();++it)
+    {
+        cout<<setw(4)<< *it ;
+    }
+    cout<<endl;
+    //重新设置容器大小
+    vecdouble.resize(10);
+    cout<<"设置后的容器大小为"<<vecdouble.size()<<endl;
+    sort(vecdouble.begin(),vecdouble.end());
+    //reverse(vecdouble.begin(),vecdouble.end());
+    for(it=vecdouble.begin();it!=vecdouble.end();++it)
+    {
+        cout<<setw(4)<<*it;
+    }
+    cout<<endl;
+    //返回下标为i的数组元素
+    cout<<(vecdouble[1])<<endl;
+    //返回第一个元素
+    cout<<vecdouble.front()<<endl;
+
+    //在某个位置插入元素
+    vecdouble.insert(vecdouble.begin()+2,6);
+
+    //删除最后一个元素
+    vecdouble.pop_back();
+
+    //删除数组元素为2.2的元素
+    vecdouble.erase(vecdouble.begin());
+    for(it=vecdouble.begin();it!=vecdouble.end();++it)
+    {
+        if(*it==2.2)
+       vecdouble.erase(it);
+    }
+    cout<<endl;
+
+    //删除下标为2的数组元素
+    // vecdouble.erase(vecdouble.begin()+2);
+    //删除下标为begin+1 ——end-2 的数组元素
+    // vecdouble.erase(vecdouble.begin()+1,vecdouble.end()-2);
+    for(it=vecdouble.begin();it!=vecdouble.end();++it)
+    {
+        cout<<setw(4)<<*it;
+    } cout<<endl;
+
+
+    //移除容器中的所有数据
+    vecdouble.clear();
+
+   //返回容器中元素的个数
+   cout<<vecdouble.size()<<endl;
+
+   //判断容器是否为空，为空返回1，否则返回0
+   cout<< vecdouble.empty()<<endl;
+    return 0;
+}
