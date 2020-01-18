@@ -1,0 +1,340 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <cstdio>
+
+#include<algorithm>//包含算法的头文件
+#include<stdio.h>
+#include<windows.h>
+
+#include<mmsystem.h>
+#pragma comment(lib,"winmm.lib")
+using namespace std;
+
+//后宫翻牌
+/*游戏规则：皇上每天只能有一次操作，
+
+1.选妃  2.宠幸
+3.打入冷宫 4.查找爱妃
+选妃和宠幸其他妃嫔的好感度会-10，被宠幸的+10，被选的为初始值100
+被打入冷宫的爱妃被删除，其他妃嫔好感度+10.查找不变
+如果在10天之内有三个以及以上的妃嫔的好感值<60,则后宫暴乱
+*/
+
+typedef struct fanpai
+{
+   int mysize;
+   int capacity;
+   string arr[10][2];
+   string dengji[5];
+   int zhi[10];
+}pfanpai;
+
+
+//选妃
+
+void addfei(pfanpai* fanpai)
+{
+
+    fanpai->mysize++;
+
+string name;
+printf("要选的名讳:");cin>>name;
+fanpai->arr[(fanpai->mysize)-1][0]=name;
+fanpai->arr[(fanpai->mysize)-1][1]="贵人";
+fanpai->zhi[(fanpai->mysize)-1]= 100;
+for(int i=0;i<((fanpai->mysize)-1);i++)
+{
+    fanpai->zhi[i]= fanpai->zhi[i]-10;
+}
+}
+
+//要宠幸的妃子，好感值+10，上升等级
+int chong(pfanpai *fanpai)
+{
+    string name;
+  printf("陛下，今晚临幸哪位妃子呀：");
+ cin>>name;
+ int i=0;int flag=0;
+ for(;i<fanpai->mysize;i++)
+ {
+     //从数组中名字一个一个与name进行比较
+     if(name.compare(fanpai->arr[i][0])==0)
+     {
+         flag=1;
+          fanpai->zhi[i]+=10;
+         for(int j=0;j<4;j++)
+         {
+             //比较等级，找到相同的进行等级提升
+             if(fanpai->dengji[j].compare(fanpai->arr[i][1])==0)
+             {
+                 fanpai->arr[i][1]=fanpai->dengji[j+1];
+                 cout<<"恭喜"<<fanpai->arr[i][0]<<"娘娘升为"<<fanpai->dengji[j+1]<<"其他娘娘好感度-10\n"<<endl;
+                 break;
+             }
+         }
+
+
+     }
+     else
+      fanpai->zhi[i]-=10;
+ }
+ if(flag==0)
+ {
+     printf("陛下，没有这位妃子，您是不是记错了\n");
+     return 0;
+ }
+ else return 1;
+
+}
+//删除妃子信息
+void my_delete(int i,pfanpai *fanpai)
+{
+    for(int j=i;j<fanpai->mysize-1;j++)
+    {
+        fanpai->arr[j][0]=fanpai->arr[j+1][0];
+         fanpai->arr[j][1]=fanpai->arr[j+1][1];
+          fanpai->zhi[j]=fanpai->zhi[j+1];
+    }
+    fanpai->mysize--;
+
+}
+int leng(pfanpai *fanpai)
+{
+    string name;
+  printf("请输入要打入冷宫的妃子：");
+  cin>>name;
+  int i=0;
+  int flag=0;
+  for(;i<fanpai->mysize;i++)
+  {
+      //string a;  string b;  a.compare(b)==0  则a和b相等
+      if(name.compare(fanpai->arr[i][0])==0)
+      {
+          flag=1;
+           printf("人情冷暖，所有娘娘好感度+10\n");
+          my_delete(i,fanpai);
+      }
+
+      fanpai->zhi[i]+=10;
+  }
+  if(flag==0)
+  {
+      printf("虚惊一场，查无此人\n");
+      return 0;
+  }
+else return 1;
+}
+//删除妃子信息
+
+int cha(pfanpai *fanpai)
+{
+    string name;
+    cout<<"您要哪位爱妃:";
+    cin>>name;
+int flag=0;
+   for(int i=0;i<fanpai->mysize;i++)
+   {
+       if((name.compare(fanpai->arr[i][0])==0))
+       {
+           flag=1;
+           cout<<name<<"的好感度+10"<<endl;
+             fanpai->zhi[i]+=10;
+             return 1;
+       }
+   }
+   if(flag==0)
+   {
+        printf("陛下，没有这位爱妃\n");
+        return 0;
+   }
+else return 1;
+
+}
+//检查后宫是否暴乱，如果有三或以上妃子好感值小于60就乱
+int sactury(pfanpai fanpai)
+{
+    int count=0;
+    for(int i=0;i<fanpai.mysize;i++)
+    {
+        if(fanpai.zhi[i]<60)
+        {
+            count++;
+        }
+    }
+    if(count>=3)
+        return 0;
+    else
+        return 1;
+
+}
+
+void print(pfanpai fanpai)
+{
+  //  denji(fanpai);
+    printf("姓名           等级           好感度\n");
+    printf("*************************************\n");
+    for(int i=0;i<fanpai.mysize;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+          cout<<fanpai.arr[i][j]<<"\t"<<"\t";
+        }
+         printf("%d\n",fanpai.zhi[i]);
+
+    }
+    printf("\n");
+}
+  void init(pfanpai* fanpai)
+ {
+
+    fanpai->capacity=5;
+    fanpai->mysize=2;
+    fanpai->dengji[0]={"贵人"};
+    fanpai->dengji[1]={"妃嫔"};
+    fanpai->dengji[2]={"贵妃"};
+    fanpai->dengji[3]={"皇贵妃"};
+    fanpai->dengji[4]={"皇后"};
+
+    fanpai->arr[0][0] = "肖战";
+    fanpai->arr[0][1] = "贵人";
+    fanpai->zhi[0]=100;
+    fanpai->arr[1][0] = "王一博";
+    fanpai->arr[1][1] = "贵人";
+    fanpai->zhi[1]=100;
+ }
+  int dates[4] = { 1,1,1,1 };//游戏时间，年月日总天数
+void data_count()//时间计数器
+{
+	dates[2]++;
+	dates[3]++;
+	int month[] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+	if (dates[2] / month[dates[1]] == 1)
+	{
+		dates[2] = 1;
+		dates[1]++;
+		if (dates[1] / 12 == 1)
+		{
+			dates[1] = 1;
+			dates[0]++;
+		}
+	}
+}
+
+void data_read()//读取游戏时间
+{
+	string year[] = { "0","元", "二", "三", "四", "五", "六", "七", "八", "九", "十" ,
+		"十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十" };
+	string month[] = { "0","元", "二", "三", "四", "五", "六", "七", "八", "九", "十" ,"十一","十二" };
+	string day[] = { "0","一", "二", "三", "四", "五", "六", "七", "八", "九", "十" ,
+		"十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十" ,
+		"二十一","二十二", "二十三", "二十四", "二十五", "二十六", "二十七", "二十八", "二十九", "三十" ,"三十一" };
+	cout << year[dates[0]] << "年" << month[dates[1]] << "月" << day[dates[2]] << "日" << endl;
+}
+
+int main()
+
+{
+
+  data_count();//时间计数器
+  data_read();//读取游戏时间
+    pfanpai fanpai;
+    init(&fanpai);
+    int day=1;
+   while(day<=10)
+   {
+       PlaySound(TEXT("sound//背景音乐.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+       //sactury();//判断后宫是否暴乱
+        printf("*************************************\n");
+       cout<<"第"<<day<<"天"<<endl;
+       printf("1.  皇帝下旨选妃    (增加)\n");
+       printf("2.  翻牌宠幸        (修改状态)\n");
+       printf("3.  打入冷宫        (删除)\n");
+       printf("4.  朕的爱妃哪去了  (查找)\n");
+        printf("5.  打印 (查找)\n");
+       printf("请陛下选择：");
+       int choose=0;
+        cin>>choose;
+
+       if(choose==1)
+       {
+           PlaySound(TEXT("sound//选妃.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+           cout<<"惊风玉露一相逢，便胜却人间无数\n";
+           addfei(&fanpai);
+           cout<<endl;
+           print(fanpai);
+       }
+       else if(choose==2)
+       {
+
+          PlaySound(TEXT("sound//翻牌.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+           cout<<"云想衣裳花想容，春风拂槛露华浓\n";
+          if(chong(&fanpai)==0)
+            continue;
+           cout<<endl;
+
+           print(fanpai);
+       }
+       else if(choose==3)
+       {
+
+           PlaySound(TEXT("sound//冷宫.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+           cout<<"只见新人笑，哪闻旧人哭 \n";
+           if(leng(&fanpai)==0)
+                continue;
+            cout<<endl;
+            print(fanpai);
+       }
+       else if(choose==4)
+       {
+
+           PlaySound(TEXT("sound//一笑倾城.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+           if(cha(&fanpai)==0)
+            continue;
+           cout<<endl;
+           print(fanpai);
+       }
+       else if(choose==5)
+       {
+            print(fanpai);
+       }
+       else
+       {
+
+
+          cout<<"还请陛下重新选择\n";
+          //清空输入错误的缓存区，防止死循环
+         if(cin.fail())
+         {
+           cin.clear();
+           while(cin.get()!='\n')
+           continue;
+         }
+
+          continue;
+
+
+       }
+
+
+       if(sactury(fanpai)==0)
+       {
+
+           cout<<"皇帝执政"<<day<<"天，卒死"<<endl;
+           break;
+       }
+
+        day++;
+   }
+   system("cls");//清屏
+
+   if(day==11)
+   {
+       cout<<"陛下英明\n";
+   }
+}
