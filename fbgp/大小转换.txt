@@ -1,0 +1,21 @@
+
+//´óÐ¡Ð´×ª»»
+/*using namespace std;
+int main()
+{
+    char s[20];
+    scanf("%s",s);
+    char *p=s;
+    while(*p!='\0')
+    {
+        if(*p<='z'&&*p>='a')
+        {
+            *p=*p-' ';
+        }
+        else
+            *p=*p+' ';
+        p++;
+    }
+   printf("%s",s);
+    return 0;
+}
