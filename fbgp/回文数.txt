@@ -1,0 +1,72 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+//变反,求和
+int *fan(int num,int *add)
+{
+    int num_fan=0;
+    int num1=num;
+    int i=0;
+    while(num>0)
+    {
+      i=num%10;
+      num_fan=num_fan*10+i;
+      num=num/10;
+    }
+    *add=num1+num_fan;
+  return add;
+}
+int huiwen(int num)
+{
+    int num1=num;
+    int i=0;
+    do
+    {
+        i=i*10+num%10;
+        num=num/10;
+    }while(num>0);
+
+    if(num1==i)
+    {
+        return 1;
+    }
+return 0;
+}
+int main()
+{
+    int num;
+
+    cin>>num;
+    int step=0;int add=0; int my_add;
+    while(1)
+    {
+        if(step==0)
+        {
+            int ans=huiwen(my_add);
+             if(ans==1)
+           {
+           cout<<step<<endl;
+           break;
+            }
+        my_add=*fan(num,&add);
+        }
+
+         else
+         {
+             num=my_add;
+             my_add=*fan(num,&add);
+         }
+       step++;
+       int ans=huiwen(my_add);
+       if(ans==1)
+       {
+           cout<<step<<endl;
+           break;
+       }
+       if(step>30)
+       {
+           cout<<"impossible"<<endl;
+           break;
+       }
+    }
+}
