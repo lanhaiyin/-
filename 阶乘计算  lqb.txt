@@ -1,0 +1,104 @@
+
+问题描述
+　　输入一个正整数n，输出n!的值。
+　　其中n!=1*2*3*…*n。
+算法描述
+　　n!可能很大，而计算机能表示的整数范围有限，需要使用高精度计算的方法。使用一个数组A来表示一个大整数a，A[0]表示a的个位，A[1]表示a的十位，依次类推。
+　　将a乘以一个整数k变为将数组A的每一个元素都乘以k，请注意处理相应的进位。
+　　首先将a设为1，然后乘2，乘3，当乘到n时，即得到了n!的值。
+输入格式
+　　输入包含一个正整数n，n<=1000。
+输出格式
+　　输出n!的准确值。
+样例输入
+10
+样例输出
+3628800
+
+#include <iostream>
+//#include <cstdio>
+//#include <string.h>
+//#include <algorithm>
+
+using namespace std;
+
+
+
+void print(int *arr,int* len)
+{
+    for(int i=*len;i>=1;i--)
+    {
+        cout<<arr[i];
+    }
+  //  cout<<endl;
+}
+int fun(int *arr,int i,int *len,int j)
+ {
+
+      int r=0;*len=j; j=1;
+            while((*len)--)
+            {
+
+                int temp=arr[j]*i;
+                if((temp+r)>9)//发生进位
+                {
+                    arr[j]=(temp+r)%10;
+                     r=(temp+r)/10;
+                }
+                else
+                {
+                     arr[j]=arr[j]*i+r;
+                     r=0;
+                }
+               ++j;
+            }
+            if(r==0)
+                --j;
+            else if (r >0)//如果最后一次的进位是一个很大很大的数，必须按位存放
+            {
+	           	while (r)
+              {
+			     arr[j] = r % 10;
+			     r /= 10;
+			      j++;
+              }
+            --j;
+            }
+    return j;
+ }
+void ans(int *arr,int n,int *len)
+{
+    int j=1;
+    //表示进位
+
+   int sum=1;arr[1]=1;
+    int i=1;
+    for(;i<=n;i++)
+    {
+
+       j= fun(arr,i,len,j);
+
+
+    }
+    *len=j;
+    print(arr,len);
+}
+int main()
+{
+   //数的大小
+    int n;
+    cin>>n;
+    if(n==0)
+    {
+        cout<<1;
+        return 0;
+    }
+    	//数的大小
+
+	int len;
+	int *arr = new int[100000]();
+	ans(arr, n,&len);
+	delete[] arr;
+
+    return 0;
+}
