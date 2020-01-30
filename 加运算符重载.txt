@@ -1,0 +1,41 @@
+
+#include <iostream>
+
+using namespace std;
+
+class integral
+{
+    public:
+      integral();
+      integral(int value):_value(value){}
+      integral operator+(integral other);
+        int intval(){return _value;}
+        virtual ~integral();
+
+    private:
+        int _value;
+};
+integral::integral():_value(0)
+{
+
+}
+integral integral::operator+(integral other)
+{
+    integral result(this->_value+other._value);
+    return result;
+}
+integral::~integral()
+{
+
+}
+void test()
+{
+    integral num1(1),num2(2),num3;
+    num3=num1+num2;
+    cout<<num3.intval()<<endl;
+}
+int main()
+{
+    test();
+    return 0;
+}
