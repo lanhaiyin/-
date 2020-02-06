@@ -1,0 +1,26 @@
+// 希尔排序
+void ShellSort(int* arr, int n)
+{
+    //同等间距上的数值进行插入排序，逐渐使间距变小
+    int gap=n/2;int i=0,k=0;
+   for(;gap>0;gap=gap/2)
+   {
+
+
+       //将gap间距上的数进行插入排序
+       for(i=gap;(i+gap)<=n;i=i+gap)
+       {
+           k=i;
+             while(k>0&&arr[k]<arr[k-gap])
+           {
+
+            _swap(&arr[k],&arr[k-gap]);
+            //交换了之后继续迭代着走
+            k=k-gap;
+
+            }
+       }
+   }
+
+
+}
