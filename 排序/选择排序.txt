@@ -1,0 +1,29 @@
+// 选择排序
+void SelectSort(int* arr, int n)
+{
+    //从第一个开始找到最小的放在第一个，然后从第二个开始找到最小的放在第二个位置
+    //a[i]~a[n-1]中的最小的与arr[i]交换
+ int len=n-1;//最后一个元素的下标
+ int _min;//最小元素的小标
+ int i=0,k=0;
+    while(--n)
+    {
+        //寻找i~len最小的
+        //如果arr[_min]>arr[k],则最小下标此时为k
+        k=i+1; _min=i;
+        while(k<=len)
+        {
+            if(arr[_min]>arr[k])
+            {
+                _min=k;
+            }
+           ++k;
+        }
+        //找到最小的并交换
+        if(i!=_min)
+            _swap(&arr[i],&arr[_min]);
+        ++i;
+    }
+
+
+}

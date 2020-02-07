@@ -1,0 +1,45 @@
+
+//快速排序
+void QuickSort(int* arr, int left, int right)
+{
+    //先找到一个key 作为基准点从左往右找到比key大的，从右往左找比key小的，
+    //然后互换
+    int key=arr[(left+right)/2];
+    int i=left;int j=right;
+    while(i<=j)
+    {
+        //找大于等于基准点key的
+        while(arr[i]<key)
+        {
+            ++i;
+        }
+        //找小于等于基准点key的
+        while(arr[j]>key)
+        {
+            --j;
+        }
+
+    if(i<=j)
+    { //0,2,3,1
+
+            _swap(&arr[i],&arr[j]);
+           --j;++i;
+    }
+
+
+        //将数组分成了两半，left~j的比arr[key]小i~right比key大
+        //递归
+
+    }
+    if(left<=j)
+    {
+        QuickSort(arr,left,j);//基准点左边的
+    }
+
+    if(right>=i)
+    {
+          QuickSort(arr,i,right);//基准点左边的
+    }
+
+
+}
