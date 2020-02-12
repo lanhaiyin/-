@@ -1,0 +1,91 @@
+#include<string.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
+//求1~n的全排列并存放到数组中
+int j=0;
+  int _plus(int arr[10],int n)
+  {
+      int sum=0;int temp=1;
+      for(int i=n-1;i>=0;i--)
+      {
+          sum+=arr[i]*temp;
+          temp*=10;
+      }
+      return sum;
+  }
+void digui(int n,int sum,int arr[10],int k,int brr[100][10])
+{
+    if(k==n-1)
+    {
+        int m=n;
+        //判断相邻的相加最终结果是否为sum
+
+         for(int i=1;i<=n;i++)//将arr 复制给brr  Brr[0] 先空着
+            {
+                brr[j][i]=arr[i-1];
+            }
+
+        while(--n)
+        {
+            for(int i=1;i<=n;i++)//将上一层的相邻之和的元素赋值
+            {
+                brr[j][i]=brr[j][i]+brr[j][i+1];
+            }
+        }
+        if(sum==brr[j][1])
+        {
+            //将开始的值给brr[0]
+             for(int i=1;i<=m;i++)//将arr 复制给brr  Brr[0] 先空着
+            {
+                brr[j][i]=arr[i-1];
+            }
+            brr[j][0]=_plus(arr,m);
+           ++j;
+            return ;
+        }
+    }
+
+
+    for(int i=k;i<n;i++)
+    {
+        swap(arr[i],arr[k]);
+        digui(n,sum,arr,k+1,brr);
+        swap(arr[i],arr[k]);
+    }
+
+}
+
+
+int main()
+{
+    int n;
+    int sum;
+    cin>>n>>sum;
+    int arr[10];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=i+1;
+    }
+
+    //将每个结果的值给brr[0] 并将对应的序列给brr[1]~brr[n];
+    int brr[100][10];
+      digui(n,sum,arr,0,brr);
+    //找最小
+    int min=brr[0][0];int m;
+    for(int i=0;i<j;i++)
+    {
+        if(min>brr[i][0])
+        {
+               min=brr[i][0];
+              m=i;//此时用n来标记brr[i][0]最小数的行
+        }
+
+    }
+     for(int j=1;j<=n;j++)
+    {
+       cout<<brr[m][j]<<" ";
+
+    }
+    return 0;
+}
