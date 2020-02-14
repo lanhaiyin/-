@@ -1,0 +1,62 @@
+void _swap(int* a, int* b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+void  AdjustDown(int* a, int n, int root)//向下调整
+{
+	int child = root * 2 + 1;
+	while (child < n)
+	{
+		if ( child + 1 < n && a[child] < a[child + 1] )
+		{
+			child++;
+		}
+		if (child < n && a[child] > a[root] )
+		{
+			_swap(&a[child], &a[root]);
+			root = child;
+			child = 2 * root + 1;
+		}
+		else
+			break;
+	}
+}
+void adjustdown(int* arr, int n ,int root)
+{
+	int child = root * 2 + 1;
+	while (child < n)
+	{
+		if (child + 1< n && arr[child] < arr[child + 1])
+		{
+			child++;
+		}
+		if (child < n && arr[child] > arr[root])
+		{
+			_swap(&arr[child], &arr[root]);
+			root = child;
+			child = 2 * root + 1;
+		}
+		else
+			break;
+	}
+}
+void heapsort(int* brr, int n)//堆排序
+{
+	//建立一个大堆
+	for (int i = (n - 2) / 2; i >= 0; i--)
+	{
+		adjustdown(brr, n, i);
+	}
+	int end = n - 1;
+	while (end)//每次将堆顶的值放在最后，再继续向下调整，继续互换
+	{
+		_swap(&brr[0], &brr[end]);
+		adjustdown(brr, end, 0);
+
+		end--;
+	}
+
+
+}
