@@ -1,0 +1,37 @@
+最小公倍数
+a=ka*i;
+b=kb*i;
+a*b=ka*kb*i*i;   ka*kb*i就是他们的最小公倍数
+所以a和b的最小公倍数等于（a*b）/最大公约数
+
+
+
+最大公约数
+a=ka*i+a1;
+b=kb*i+b1;
+(a+b)%i=(a1+b1)%i;
+  很重要    （a+b)%p=(  (a%p)+(b%p)  )%p
+同理       （a*b)%p=(  (a%p)*(b%p)  )%p
+  a=ka*i;
+b=kb*i;
+(b-na)=(kb-n*ka)*i;
+a和b的最大公约数等于（ b-na)与a的最大公约数一样
+（b-na）=b%a;
+所以求  a和b的最大公约数与求  （b%a)和a的最大公约数一样
+#include<string.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
+//辗转相除法求最大公约数
+ int gcb(int a,int b)
+ {
+     if(a==0)
+        return b;
+     return gcb(b%a,a);
+ }
+int main()
+{
+    cout<<gcb(40,15)<<endl;
+    cout<<gcb(15,40);//当两个数大小不一致时，并不影响结果，因为会将15%40的值传给a，40传给                                                                                                              //b，相当于交换了顺序。
+    return 0;
+}
