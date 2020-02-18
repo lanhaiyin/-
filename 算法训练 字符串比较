@@ -1,0 +1,52 @@
+问题描述
+　　strncmp函数的原型为：int strncmp(char *s, char *t, int n);，其功能是比较字符串s和t的前n个字符。如果s<t，返回-1；如果s=t，返回0；如果s>t，返回1。请自己编程实现该函数，并编写一个程序来测试其正确性。
+　　输入格式：输入有三行，第一行为字符串s，第二行为字符串t，第三行为整数n。
+　　输出格式：输出只有一个整数，即比较结果。
+输入输出样例
+样例输入
+world
+word
+4
+样例输出
+1
+
+
+#include <iostream>
+using namespace std;
+void my_strncmp(char* str1, char* str2, int n)
+{
+    char* p1 = str1;
+    char* p2 = str2;
+    int sum = 0;
+    while (n--)
+    {
+        if (*p1 == '\0')
+        {
+            cout << -1; return;
+        }
+        if (*p2 == '\0')
+        {
+            cout << 1; return ;
+        }
+        if (*p1 != *p2)
+        {
+            cout << ((*p1) < (*p2) ? -1 : 1);
+            return;
+        }
+        ++p1; ++p2;
+    }
+    cout << 0;
+}
+
+
+int main()
+{
+    char str1[100];
+    char str2[100];
+    int n;
+    cin >> str1;
+    cin >> str2;
+    cin >> n;
+    my_strncmp(str1, str2, n);
+    return 0;
+}
