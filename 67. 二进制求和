@@ -1,0 +1,95 @@
+67. 二进制求和
+给定两个二进制字符串，返回他们的和（用二进制表示）。
+
+输入为非空字符串且只包含数字 1 和 0。
+
+示例 1:
+
+输入: a = "11", b = "1"
+输出: "100"
+示例 2:
+
+输入: a = "1010", b = "1011"
+输出: "10101"
+
+
+void swap(char arr[],int len)
+{
+    int left=0;int right=len-1;
+    while(left<right)
+    {
+       char temp= arr[left];
+       arr[left]=arr[right];
+       arr[right]=temp;
+       ++left;--right;
+    }
+}
+
+char * addBinary(char *a, char * b){
+int len1=strlen(a);
+int len2=strlen(b);
+char *c=(char *)malloc(len1+len2+1);
+//先交换
+swap(a,len1);
+swap(b,len2);
+int min=len1>len2? len2:len1;int temp=0;
+int i=0;
+for(;i<min;i++)
+{
+    if(a[i]+b[i]+temp-'0'>'1')
+    {
+         c[i]=(a[i]+b[i]+temp)%2+'0';
+
+        temp=(a[i]+b[i]+temp)/2-'0';
+
+    }
+    else
+    {
+         c[i]=(a[i]+b[i]+temp-'0');
+         temp=0;
+    }
+}
+
+if(len1==min)//a数组长度小则将b后面的加起来
+for(;i<len2;i++)
+{
+     if(b[i]+temp>'1')
+    {
+        temp=(b[i]+temp-'0')/2;
+        c[i]=(b[i]+temp-'0')%2+'0';
+
+    }
+    else
+    {
+         c[i]=(b[i]+temp);
+         temp=0;
+    }
+}
+if(len2==min)//b数组长度小则将a后面的加起来
+for(;i<len1;i++)
+{
+     if(a[i]+temp>'1')
+    {
+        temp=(a[i]+temp+'0')/2-'0';
+        c[i]=(a[i]+temp)%2+'0';
+
+    }
+    else
+    {
+         c[i]=(a[i]+temp);
+         temp=0;
+    }
+}
+if(temp!=0)
+{
+    while(temp)
+    {
+        c[i]=(temp+'0')%2+'0';
+        temp=temp/2;
+        i++;
+    }
+}
+swap(c,i);
+c[i]='\0';
+    return c;
+}
