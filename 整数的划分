@@ -1,0 +1,41 @@
+#include<string.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//整数的划分
+ int flag=0;
+void digui(int *arr,int n,int k)
+{
+
+
+    if(n==0)
+    {
+         if(flag!=arr[0]&&flag!=0)
+        cout<<endl;
+        if(flag==arr[0])
+            cout<<",";
+      int i=0;
+        for(;i<k;i++)
+        {
+             cout<<arr[i];
+         if(i<k-1)cout<<"+";
+        }
+
+            flag=arr[0];
+    }
+
+    for(int i=n;i>0;i--)
+    {
+        if(k>0&&i>arr[k-1])continue;
+        arr[k]=i;
+        digui(arr,n-i,k+1);
+    }
+}
+int main()
+{
+    int arr[100];
+    digui(arr,6,0);
+    return 0;
+
+}
