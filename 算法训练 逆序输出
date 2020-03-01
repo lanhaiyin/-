@@ -1,0 +1,46 @@
+#if 0
+/**
+    问题描述
+    　　编写一个递归函数，将一个正整数的每一位取出来并从低位到高位的顺序输出
+    输入格式
+    　　123456
+    输出格式
+    　　654321
+    样例输入
+    一个满足题目要求的输入范例。
+    例：
+    654321
+    样例输出
+    与上面的样例输入对应的输出。
+    例：
+    123456
+*/
+
+#include <iostream>
+
+using namespace std;
+
+
+void reverse(int t)
+{
+    if(t == 0) return;
+
+    cout << t % 10;
+
+    reverse(t / 10);
+}
+
+int main()
+{
+    int num = 0;
+
+    cin >> num;
+
+    reverse(num);
+
+    return 0;
+}
+
+
+
+#endif
