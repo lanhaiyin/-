@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cstring>
+#include <string.h>
+#include <stdlib.h>
+#include <iomanip>
+#include <algorithm>
+#include <math.h>
+using namespace std;
+  void  fun(int brr[10000],int n,int first,int arr[100000][3])
+  {
+      brr[0]=first;int size=1;
+      for(int i=0;i<n-1;i++)
+      {
+          if(arr[i][2]==1)//放到右边
+          {
+              for(int k=size;k>0;k--)
+              {
+                  if(brr[k-1]==arr[i][1])
+                  {
+                     brr[k]=arr[i][0];
+                     size++;
+                     break;
+                  }
+                  brr[k]=brr[k-1];
+              }
+          }
+          else
+          {
+              for(int k=size;k>0;k--)
+              {
+                  if(brr[k-1]==arr[i][1])
+                  {
+                      brr[k]=brr[k-1];
+                     brr[k-1]=arr[i][0];
+                     size++;
+                     break;
+                  }
+                  brr[k]=brr[k-1];
+              }
+          }
+      }
+  }
+int main()
+{
+    int n=0;
+    cin>>n;
+    int first=0;
+    cin>>first;
+    int arr[100000][3];
+    for(int i=0;i<n-1;i++)
+    {
+       cin>>arr[i][0];
+        cin>>arr[i][1];
+        cin>>arr[i][2];
+    }
+    int brr[100000];
+    fun(brr,n,first,arr);
+    for(int i=0;i<n;i++)
+    {
+        cout<<brr[i]<<" ";
+    }
+    return 0;
+}
