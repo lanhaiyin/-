@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    int N,L;
+    int j;
+    cin>>N>>L;
+    int length;//满足和等于N的长度
+    for(int i=N/L;i>=0;i--)
+    {
+        j=i;
+        int ans;//表示加起来的和用来和N比较
+        length=0;
+        while(ans<N)
+        {
+            length++;
+            ans+=j;
+           j++;
+        }
+        //如果和等于N就比较length是否大于等于L并且小于100
+        //如果不满足就不进行处理继续循环
+        if(ans==N)
+        {
+            if(length>100)
+            {
+                cout<<"No";
+                return 0;
+            }
+            if(length>=L)//满足条件则输出
+            {
+                //i是满足条件的第一个数，将从i到累加和为N的输出
+              ans=i;j=i;
+              //18 2  从5开始打印 最后一个没有空格所以在前一个就退出循环
+                while(ans<N)
+                {
+                    cout<<j<<" ";
+                    j++;
+                     ans+=j;
+                }
+                cout<<j;
+               return 0;
+            }
+        }
+    }
+
+cout<<"No";
+    return 0;
+}
