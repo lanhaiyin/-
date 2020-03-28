@@ -1,0 +1,31 @@
+题目描述
+输入一个正整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。例如输入数组{3，32，321}，则打印出这三个数字能排成的最小数字为321323。
+
+
+class Solution {
+public:
+    string PrintMinNumber(vector<int> numbers) {
+        if(numbers.size()==0)
+            return "";
+       for(int i=0;i<numbers.size()-1;i++a)
+       {
+           for(int j=i+1;j<numbers.size();j++)
+           {
+              string s1=to_string(numbers[i]);
+                string s2=to_string(numbers[j]);
+               //s1+s2>s2+s1 返回1说明s1大，所以要交换
+               if((s1+""+s2).compare(s2+""+s1)>0)
+               {
+                   swap(numbers[i],numbers[j]);
+               }
+           }
+       }
+        string str="";
+      for(int i=0;i<numbers.size();i++)
+      {
+           
+         str+=to_string(numbers[i]);
+      }
+        return str;
+    }
+};
