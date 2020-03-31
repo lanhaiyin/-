@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+#include <bitset>
+using namespace std;
+int fun(int i)
+{
+    int n=0;int temp=1;
+  while(i)
+  {
+      n+=i%2*temp;
+      i=i/2;
+      temp*=10;
+  }
+  return n;
+}
+int main()
+{
+
+	for(int i=0;i<32;i++)
+	{
+		cout<<setw(5)<<setfill('0')<<fun(i)<<endl;
+	}
+	return 0;
+}
