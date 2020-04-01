@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+//计算一个数的每位之和
+long long add(long long m)
+{
+	long long ans=0;
+
+  while(m)
+	{
+		ans+=m%10;
+		m/=10;
+	}
+	return ans;
+}
+
+//计算 n(k)!
+
+	long long fun(int k,int n)
+{
+		long long ans=1;int x =0;
+
+	while(n-x*k>0)
+	{
+		ans*=(long long)(n-x*k);
+		x++;
+	}
+		return ans;
+}
+		int main()
+{
+	int n,k,m;
+			cin>>n>>k;
+			cin>>m;
+			long long daan=0;
+			for(int i=1;i<=k;i++)
+			{
+				daan+=fun(i,n);
+			}
+			if(m==1)
+				cout<<daan<<endl;
+			else
+			{
+				cout<<add(daan)<<endl;
+			}
+
+
+	return 0;
+}
