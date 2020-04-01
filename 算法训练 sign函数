@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	double x;
+	cin>>x;
+	const double eps=1e-6;
+
+	if(x>0)
+   cout<<1<<endl;
+	else if(fabs(x)<=eps)
+		cout<<0<<endl;
+	else
+		cout<<-1<<endl;
+
+
+
+	return 0;
+}
