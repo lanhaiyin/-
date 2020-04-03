@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+using namespace std;
+
+//求字符数组里面数值的反 0换1,1换0；
+void fun(char arr[21],char brr[21])
+{
+	int len=strlen(arr);
+	int i=0;
+	while(len--)
+	{
+	  if(arr[i]=='0')
+		{
+			brr[i]='1';
+		}
+		else
+			brr[i]='0';
+		i++;
+	}
+}
+
+int main()
+{
+  int n,m;char brr[21]={0};
+	char arr[50000][21]={0};
+	cin>>n>>m;
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<m;j++)
+		{
+			cin>>arr[i][j];
+		}
+	}
+	int count=0;
+	for(int i=0;i<n-1;i++)
+	{
+		 fun(arr[i],brr);
+		for(int j=i+1;j<n;j++)
+		{
+
+			if(strcmp(arr[j],brr)==0)
+				count++;
+
+		}
+	}
+
+	cout<<count;
+
+	return 0;
+}
