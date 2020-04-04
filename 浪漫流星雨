@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <graphics.h>//easyXͼ�ο�
+#include <time.h>
+#include <conio.h>
+#include <windows.h>
+#include <mmsystem.h> //��ý���ͷ�ļ�
+#pragma comment (lib,"winmm.lib")
+IMAGE img1,img2;
+//���ǵ�����
+struct Star
+{
+	int x,y;//����
+	int color ;//��ɫ
+	int step; //�ٶ�
+}star[1000];
+
+//���ǵ�����
+struct Meteor
+{
+	int x,y; //����
+	int step; //�ٶ�
+	int style;  //���
+}meteor[350];
+
+//��ʼ������
+void initStar(int i)
+{
+	star[i].x=rand()%1500;
+	star[i].y=rand()%800;
+	star[i].color=RGB(rand()%255,rand()%255,rand()%255);
+	star[i].step=rand()%5+2;  //[2,6]
+}
+
+//�����ǵ��ƶ�
+void drawStar(int i)
+{
+	//����
+	putpixel(star[i].x,star[i].y,star[i].color);
+	star[i].x+=star[i].step; //ƽ���ƶ�
+	//��ֹ�����ܳ�ȥ
+	if(star[i].x>1500)
+	{
+		putpixel(star[i].x,star[i].y,star[i].color);
+		initStar(i);
+	}
+}
+//��ʼ������
+void initMeteor(int i)
+{
+  //���ǵ�x,y һ��ʼ�����ڴ��ڵ�����
+	meteor[i].x=rand()%2000-1000;  //[0,1999]-1000----����-1000,999��
+	meteor[i].y=rand()%200-400;  //[-400,-201]
+	meteor[i].step=rand()%10+5;  //�ٶȲ�Ϊ0
+	meteor[i].style=rand()%2; //���Ϊ0��1
+}
+//������
+void drawMeteor(int i)
+{
+	for(int i=0;i<350;i++)
+	{
+		if(meteor[i].style==0)
+		{
+			putimage(meteor[i].x,meteor[i].y,&img1,SRCPAINT);//SRCPAINT
+		}
+		
+		if(meteor[i].style==1)
+		{
+			putimage(meteor[i].x,meteor[i].y,&img2,SRCPAINT);
+		}
+	}
+} 
+//�ƶ�����
+void moveMeteor(int i)
+{
+	for(int i=0;i<350;i++)
+	{
+       meteor[i].x+=meteor[i].step;
+	   meteor[i].y+=meteor[i].step;
+	   if(meteor[i].x>1500||meteor[i].y>800)
+	   {
+		   initMeteor(i);
+	   }
+	}
+}
+
+//��ʼ�Ľ��棬�������
+void printText()
+{
+	//��ָ����λ���������
+	settextcolor(YELLOW);  //�����������ɫ
+	settextstyle(30,0,"����");  //��������ĵ�ǰ��ʽ
+	Sleep(1000);
+	outtextxy(550,150,"����Ұ���");
+	Sleep(1000);
+	outtextxy(550,200,"����������ĺ���");
+	Sleep(1000);
+	outtextxy(550,250,"����Ұ���");
+	Sleep(1000);
+    outtextxy(550,300,"����������Ĭ��");
+	Sleep(1000);
+    outtextxy(550,350,"����Ұ���");
+	Sleep(1000);
+    outtextxy(550,400,"ʮ�ﴺ�粻����");
+	Sleep(1000);
+    outtextxy(550,450,"����Ұ���");
+	outtextxy(550,500,"����������ϧ����");
+	outtextxy(550,550,"���������");
+	outtextxy(1000,700,"����---����ө");
+	_getch();
+
+}
+
+int main()
+{
+	PlaySound(TEXT("���������.wav"),
+          NULL,SND_FILENAME |SND_ASYNC |SND_LOOP);
+	srand((unsigned int)time(NULL));
+	initgraph(1500,800);//����ͼ�δ���	
+	mciSendString("open ����.MP3 alias lhy",NULL,0,NULL);//�������ļ�
+	mciSendString("play lhy repeat",NULL,0,NULL);//���������ļ�
+	//����ͼƬ
+	loadimage(&img1,"1.gif",40,40);
+	//loadimage(&img2,"2.gif",10,10);
+	//����ͼƬ����
+	printText();
+		//IMAGE sky;
+	//����ͼƬ
+	//loadimage(&sky,"�ǿ�.jpg");
+    //��ʾͼƬ
+
+	//��ʼ�����е�����
+	for(int i=0;i<1000;i++)
+	{
+		initStar(i);	
+	}
+	for(int i=0;i<350;i++)
+	{
+		initMeteor(i);
+	
+	}
+	while(1)
+	{
+		int i;
+		BeginBatchDraw();//��ֹ��ͣ
+		cleardevice();  //ˢ��
+		IMAGE sky;
+		loadimage(&sky,"�ǿ�.jpg",1500,800);		
+		putimage(0,0,&sky);
+		for(i=0;i<1000;i++)
+	    {	  
+		   drawStar(i);
+	    }
+		drawMeteor(i);
+		moveMeteor(i);
+		Sleep(100);
+		EndBatchDraw();
+	}
+   while(1)//��ֹ����		
+	closegraph();//�رմ���
+	return 0;
+}
