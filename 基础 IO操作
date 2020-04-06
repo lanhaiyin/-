@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+int main()
+{
+    //打开文件
+    //int open(const char * pathname,int flags,mode_t mode)
+    //pathname:要打开的文件路径
+    //flags：当做位图来处理的 以何种方式打开 O_RDONLY,O_WRONLY,O_RDWR这三个参数任选其一
+    //可以附加的参数O_CREAT:如果打开的文件不存在则创建文件
+    //O_TRUNC：打开文件之后截断文件
+    //O_APPEND：以追加方式打开 附加的组合|来使用 
+   // close(0);//关闭了标准输入 
+   
+    //打开
+    int fd=open("./tmp.txt",O_RDWR | O_CREAT|O_APPEND, 0664);
+    if(fd<0)
+    {
+        perror("open");
+        return 0;
+    }
+    printf("fd:[%d]\n",fd);
+   //写
+   int ret=write(fd,"lhy",3);
+   if(ret<0)
+   {
+       perror("write");
+       return 0;
+   
+   }
+   //偏移到文件头部
+   lseek(fd,1,SEEK_SET);//使文件流指针从写入的最末尾偏移到文件头部再进行读
+   //读
+   char buf[1024]={0};
+ret=read(fd,buf,sizeof(buf)-1);//最多读1023个字节
+if(ret<0)
+{
+    printf("read error");
+    return 0;
+}
+else if(ret==0)
+{
+    printf("read size [%d]\n",ret);
+}
+printf("%s\n",buf);
+close(fd);//关闭文件描述符
+    return 0;
+}
