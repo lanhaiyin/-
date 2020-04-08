@@ -1,0 +1,57 @@
+
+#include <iostream>
+#include <math.h>
+#include <string.h>
+using namespace std;
+//二进制的乘法和10进制的一样 12*111=12*(100+10+1)
+int main()
+{
+	int m,n;
+	cin>>m>>n;
+	//先将最小的转成二进制
+	int _min,_max;
+	if(m>n)
+    {
+_max=m;
+        _min=n;
+    }
+    else{
+         _max=n;
+        _min=m;
+    }
+
+
+	char arr[100000]={'\0'};
+	int i=0;
+	//int m_min=_min;
+	while(_min)
+	{
+		arr[i]=(_min%2);
+		_min/=2;
+		i++;
+	}
+	int ans=0;
+	int len=i;
+   //11*1001=11*1000+11*1
+   int j=0;
+	while(_max)
+    {
+
+
+        if(_max%2==1)
+        {
+             i=0;
+            while(i<len)
+          {
+              ans+=arr[i]*pow(2,j+i);
+              i++;
+          }
+        }
+       j++;
+        _max=_max/2;
+    }
+
+	cout<<ans;
+
+	return 0;
+}
