@@ -1,0 +1,38 @@
+class Solution {
+public:
+    void reOrderArray(vector<int> &array) {
+       
+     int *arr=new int;//存放奇数
+        int size1,size2=0;
+     int *brr=new int;//存放偶数
+        for(int i=0;i<array.size();i++)
+        {
+            if(array[i]%2!=0)
+            {
+                arr[size1]=array[i];
+                size1++;
+            }else
+            {
+                brr[size2]=array[i];
+                size2++;
+            }
+        }
+       // 先将arr数据的值拷贝到array里面，再将brr的值追加到array后面
+       // memcpy(void *dest, const void *src, size_t n);
+       // memcpy(array,arr,size1*4);
+       // memcpy(array+size1*4,brr,size2*4);
+        for(int i=0;i<array.size();i++)
+        {
+            if(i<size1)
+            {
+                array[i]=arr[i];
+            }
+            else
+            {
+                array[i]=brr[i-size1];
+            }
+        }
+        //delete[] arr;
+       // delete[] brr;
+    }
+};
