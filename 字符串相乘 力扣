@@ -1,0 +1,38 @@
+class Solution {
+public:
+    string multiply(string num1, string num2) {
+  if(num1=="0"||num2=="0") return "0";
+       int *arr=new int[250]();
+       //先不进位的相乘，后面再从最后一个开始>=10进位
+       //99*999相当于100*1000所以两个数相乘最多会有位数和+1
+       for(int i=num1.size()-1;i>=0;i--)
+       {
+           for(int j=num2.size()-1;j>=0;j--)
+           {
+              arr[i+j+2]+=int((num1[i]-'0')*(num2[j]-'0'));
+           }
+       }
+       //拆分eg: 12,24,5挨个对10取余并进位拆成 1,4,4,5
+       int len=num1.size()+num2.size();
+       int i=len;
+       for(;i>0;i--)
+       {
+           arr[i-1]+=arr[i]/10;
+           arr[i]%=10;
+       }
+       //去零
+       i=0;
+       while(arr[i]==0)
+       {
+           i++;
+       }
+      string s="";
+       for(;i<=len;i++)
+       {
+           s+=to_string(arr[i]);
+        
+       }
+     
+       return s;
+    }
+};
