@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    string s;
+cin>>n;
+ 
+   cin>>s;
+    int ans=1000;
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]=='L')
+        {
+            ans--;     
+        }
+        else
+        {
+            ans++;   
+        }     
+        
+    }
+    char str[5]={'N','E','S','W'};
+  
+    cout<<str[ans%4]<<endl;
+  
+    return 0;
+}
