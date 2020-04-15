@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+   // int Hi,Mi;
+    int arr[2][100];
+    //第0行表示时，第一行表示分
+    for(int i=0;i<n;i++)
+    {
+       cin>>arr[0][i];
+        cin>>arr[1][i];
+    }
+    int x,A,B;
+    cin>>x;
+    cin>>A>>B;
+    int last=A*60+B-x;int max=0;int xb=0;
+    int i=0;
+    for(;i<n;i++)
+    {
+        if(last>=(arr[0][i]*60+arr[1][i]))
+           {
+               if(max<(arr[0][i]*60+arr[1][i]))
+               {
+                   max=arr[0][i]*60+arr[1][i];
+                   xb=i;
+               }
+           }
+    }
+    cout<<arr[0][xb]<<" "<<arr[1][xb]<<endl;
+    
+    return 0;
+}
