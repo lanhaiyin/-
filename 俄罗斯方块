@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int *arr=new int[m];
+   vector<int> brr(n);
+    for(int i=0;i<m;i++)
+    {
+        cin>>arr[i];
+    }
+    int i=0;
+    while(i<m)
+    {
+        brr[arr[i]-1]++;
+        i++;
+    }
+    //找到brr里面最小的
+   cout<<*min_element(brr.begin(),brr.end());
+    
+    return 0;
+}
