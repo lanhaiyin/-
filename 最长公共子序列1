@@ -1,0 +1,54 @@
+// write your code here cpp
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+string quchong(string s)
+{
+    sort(s.begin(),s.end());
+   int i=0,n=s.size();
+    while(i<s.size())
+    {
+        if(i+1<n&&s[i]==s[i+1])
+            while(i+1<n&&s[i]==s[i+1])
+            {
+               
+                s.erase(s.begin()+i);
+               
+            }
+        ++i;
+    }
+   
+    return s;
+}
+int main()
+{
+    string a,b;
+    while(cin>>a>>b)
+    {
+        //去重
+        a=quchong(a);
+        b=quchong(b);
+       // cout<<a<<" "<<b<<endl;
+        string max,min;
+       a.size()>b.size()? (max=a,min=b):(min=a,max=b);
+       // cout<<max<<min<<endl;
+        int count=0;
+        for(int i=0;i<min.size();i++)
+        {
+            for(int j=0;j<max.size();j++)
+            {
+                if(min[i]==max[j])
+                {
+                     ++count;
+                    max.erase(max.begin()+j);
+                    ++j;
+                     break;
+                }
+                   
+            }
+        }
+        cout<<count<<endl;
+    }
+    return 0;
+}
